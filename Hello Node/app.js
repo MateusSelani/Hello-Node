@@ -1,8 +1,5 @@
-const express = require('express');
-const app = express();
-
-    /* Extensão EJS p/ páginas HTML */
-app.set('view engine', 'ejs');
+/* Express e ejs */
+var app = require('./Config/Server');
 
     /* Página de Home */
 app.get('/', function(req, res){
