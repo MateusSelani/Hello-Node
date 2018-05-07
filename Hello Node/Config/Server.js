@@ -1,3 +1,6 @@
+    /* Configuracoes Servidor */
+module.exports = function(){
+
 const express = require('express');
 const app = express();
 
@@ -5,5 +8,14 @@ const app = express();
 app.set('view engine', 'ejs');
     /* Caminho para pasta views */
 app.set('views','./App/views');
+    
+    /* Caminho para rotas */
+var rotas = require('../App/Rotas/web');
+rotas(app);
 
-module.exports = app;
+    /* Server porta 8000 */
+app.listen(8000, function(){
+    console.log("localhost: 8000");
+});
+
+};
