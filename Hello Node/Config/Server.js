@@ -13,6 +13,10 @@ app.set('views','./App/views');
 var rotas = require('../App/Rotas/web');
 rotas(app);
 
+    /* Adicionando Banco de Dados */
+ var db = require('./db');
+ var con = db();
+
     /* Server porta 8000 */
 app.listen(8000, function(){
     console.log("localhost: 8000");
